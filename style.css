@@ -1,0 +1,16 @@
+body {
+    background-color: #EEE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#toast {
+    width: 64px;
+	height: 64px;
+}
+
+#music {
+    display: none;
+}
