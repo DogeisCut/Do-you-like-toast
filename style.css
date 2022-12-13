@@ -11,6 +11,83 @@ body {
 	height: 64px;
 }
 
-#music {
+#thank {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    font-size: 60px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    transition: opacity 1s;
+}
+audio {
     display: none;
+}
+.shaking-text {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.newbody {
+   background-color: #EEE;
+   transition: background-color 10s ease-in-out;
+}
+
+.newbody.loaded {
+  background-color: black;
+  transition: background-color 10s ease-in-out;
+}
+
+.what {
+  color: #EEE;
+}
+
+.rotating-image {
+  animation: spin 100s ease-in infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(300000deg);
+  }
 }

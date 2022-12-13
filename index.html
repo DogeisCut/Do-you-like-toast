@@ -5,8 +5,24 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<p id="thank">Thank you for your time</p>
+	<audio id="music" src="1.mp3"></audio>
 	<a href="3.html">
-		<img id="toast" src="toast.png" height="64" width="64">
+		<img id="toast" src="toast.png" height="64" width="64" alt="The toast of gods">
 	</a>
+	<script>
+	const thankYouMessage = document.getElementById("thank");
+    const music = document.getElementById("music");
+	const toast = document.getElementById("toast");
+
+    document.addEventListener("click", () => {
+      thankYouMessage.style.opacity = 1;
+	  toast.classList.add('rotating-image')
+      music.play();
+    });
+	toast.addEventListener("click", () => {
+      toast.style.opacity = 0;
+    });
+	</script>
 </body>
 </html>
